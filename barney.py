@@ -1,6 +1,7 @@
 import random
 import turtle
 t = turtle.Pen()
+turtle.speed(10)
 
 
 def function85(x, y):
@@ -22,30 +23,21 @@ def function7b(x,y):
 
 (p,q) = (0,0)
 for i in range(1000000):
+        x = 65*p
+        y = 37*q - 252
+        t.up()
+        t.goto(x,y)
+        t.down()
+        t.dot(3,"green")
         (z) = random.randrange(1,100)
         if (z) <= 85:
                 (p,q) = function85(p,q)
-                t.up()
-                t.goto(p,q)
-                t.down()
-                t.dot(3,"red")
         elif (z) <= 92:
-                (p,q) = function7a(p,q)
-                t.up()
-                t.goto(p,q)
-                t.down()
-                t.dot(3,"red")
+                (p,q) = function7a(p,q) 
         elif (z) <= 99:
                 (p,q) = function7b(p,q)
-                t.up()
-                t.goto(p,q)
-                t.down()
-                t.dot(3,"red")
         elif (z) <= 100:
                 (p,q) = function1(p,q)
-                t.up()
-                t.goto(p,q)
-                t.down()
-                t.dot(3,"red")
-
+                
         
+
